@@ -1385,6 +1385,10 @@ macro_rules! define_visit {
     (name I64Sub128) => ("i64.sub128");
     (name I64MulWideS) => ("i64.mul_wide_s");
     (name I64MulWideU) => ("i64.mul_wide_u");
+    (name I64AddWideS) => ("i64.add_wide_s");
+    (name I64AddWideU) => ("i64.add_wide_u");
+    (name I64Add3WideS) => ("i64.add3_wide_s");
+    (name I64Add3WideU) => ("i64.add3_wide_u");
 }
 
 impl<'a> VisitOperator<'a> for PrintOperator<'_, '_, '_, '_> {

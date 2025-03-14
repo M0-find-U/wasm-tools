@@ -4625,4 +4625,32 @@ impl<'a> InstructionSink<'a> {
         22u32.encode(self.sink);
         self
     }
+
+    /// Encode [`Instruction::I64AddWideS`].
+    pub fn i64_add_wide_s(&mut self) -> &mut Self {
+        self.sink.push(0xFC);
+        23u32.encode(self.sink);
+        self
+    }
+
+    /// Encode [`Instruction::I64AddWideU`].
+    pub fn i64_add_wide_u(&mut self) -> &mut Self {
+        self.sink.push(0xFC);
+        24u32.encode(self.sink);
+        self
+    }
+
+    /// Encode [`Instruction::I64Add3WideS`].
+    pub fn i64_add3_wide_s(&mut self) -> &mut Self {
+        self.sink.push(0xFC);
+        25u32.encode(self.sink);
+        self
+    }
+
+    /// Encode [`Instruction::I64Add3WideU`].
+    pub fn i64_add3_wide_u(&mut self) -> &mut Self {
+        self.sink.push(0xFC);
+        26u32.encode(self.sink);
+        self
+    }
 }

@@ -1201,6 +1201,10 @@ instructions! {
         I64Sub128   : [0xfc, 20] : "i64.sub128",
         I64MulWideS : [0xfc, 21] : "i64.mul_wide_s",
         I64MulWideU : [0xfc, 22] : "i64.mul_wide_u",
+        I64AddWideS : [0xfc, 23] : "i64.add_wide_s",
+        I64AddWideU : [0xfc, 24] : "i64.add_wide_u",
+        I64Add3WideS : [0xfc, 25] : "i64.add3_wide_s",
+        I64Add3WideU : [0xfc, 26] : "i64.add3_wide_u",
     }
 }
 

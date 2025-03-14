@@ -1373,6 +1373,10 @@ impl<'a> BinaryReader<'a> {
             0x14 => visitor.visit_i64_sub128(),
             0x15 => visitor.visit_i64_mul_wide_s(),
             0x16 => visitor.visit_i64_mul_wide_u(),
+            0x17 => visitor.visit_i64_add_wide_s(),
+            0x18 => visitor.visit_i64_add_wide_u(),
+            0x19 => visitor.visit_i64_add3_wide_s(),
+            0x1a => visitor.visit_i64_add3_wide_u(),
 
             _ => bail!(pos, "unknown 0xfc subopcode: 0x{code:x}"),
         })

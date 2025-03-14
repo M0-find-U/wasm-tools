@@ -1239,6 +1239,10 @@ pub enum Instruction<'a> {
     I64Sub128,
     I64MulWideS,
     I64MulWideU,
+    I64AddWideS,
+    I64AddWideU,
+    I64Add3WideS,
+    I64Add3WideU,
 }
 
 impl Encode for Instruction<'_> {
@@ -2066,6 +2070,10 @@ impl Encode for Instruction<'_> {
             Instruction::I64Sub128 => sink.i64_sub128(),
             Instruction::I64MulWideS => sink.i64_mul_wide_s(),
             Instruction::I64MulWideU => sink.i64_mul_wide_u(),
+            Instruction::I64AddWideS => sink.i64_add_wide_s(),
+            Instruction::I64AddWideU => sink.i64_add_wide_u(),
+            Instruction::I64Add3WideS => sink.i64_add3_wide_s(),
+            Instruction::I64Add3WideU => sink.i64_add3_wide_u(),
         };
     }
 }

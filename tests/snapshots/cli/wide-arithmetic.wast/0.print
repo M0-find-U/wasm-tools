@@ -1,6 +1,7 @@
 (module
   (type (;0;) (func (param i64 i64 i64 i64) (result i64 i64)))
   (type (;1;) (func (param i64 i64) (result i64 i64)))
+  (type (;2;) (func (param i64 i64 i64) (result i64 i64)))
   (func (;0;) (type 0) (param i64 i64 i64 i64) (result i64 i64)
     local.get 0
     local.get 1
@@ -24,5 +25,27 @@
     local.get 0
     local.get 1
     i64.mul_wide_u
+  )
+  (func (;4;) (type 1) (param i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    i64.add_wide_s
+  )
+  (func (;5;) (type 1) (param i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    i64.add_wide_u
+  )
+  (func (;6;) (type 2) (param i64 i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    local.get 2
+    i64.add3_wide_s
+  )
+  (func (;7;) (type 2) (param i64 i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    local.get 2
+    i64.add3_wide_u
   )
 )

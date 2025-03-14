@@ -1701,6 +1701,23 @@ where
         self.push_operand(ValType::I64)?;
         Ok(())
     }
+
+    fn check_i64_add_wide(&mut self) -> Result<()> {
+        self.pop_operand(Some(ValType::I64))?;
+        self.pop_operand(Some(ValType::I64))?;
+        self.push_operand(ValType::I64)?;
+        self.push_operand(ValType::I64)?;
+        Ok(())
+    }
+
+    fn check_i64_add3_wide(&mut self) -> Result<()> {
+        self.pop_operand(Some(ValType::I64))?;
+        self.pop_operand(Some(ValType::I64))?;
+        self.pop_operand(Some(ValType::I64))?;
+        self.push_operand(ValType::I64)?;
+        self.push_operand(ValType::I64)?;
+        Ok(())
+    }
 }
 
 pub fn ty_to_str(ty: ValType) -> &'static str {
@@ -4235,6 +4252,18 @@ where
     }
     fn visit_i64_mul_wide_u(&mut self) -> Result<()> {
         self.check_i64_mul_wide()
+    }
+    fn visit_i64_add_wide_s(&mut self) -> Result<()> {
+        self.check_i64_add_wide()
+    }
+    fn visit_i64_add_wide_u(&mut self) -> Result<()> {
+        self.check_i64_add_wide()
+    }
+    fn visit_i64_add3_wide_s(&mut self) -> Result<()> {
+        self.check_i64_add3_wide()
+    }
+    fn visit_i64_add3_wide_u(&mut self) -> Result<()> {
+        self.check_i64_add3_wide()
     }
 }
 

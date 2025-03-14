@@ -776,6 +776,10 @@ macro_rules! _for_each_operator_group {
                 I64Sub128 => visit_i64_sub128 (arity 4 -> 2)
                 I64MulWideS => visit_i64_mul_wide_s (arity 2 -> 2)
                 I64MulWideU => visit_i64_mul_wide_u (arity 2 -> 2)
+                I64AddWideS => visit_i64_add_wide_s (arity 2 -> 2)
+                I64AddWideU => visit_i64_add_wide_u (arity 2 -> 2)
+                I64Add3WideS => visit_i64_add3_wide_s (arity 3 -> 2)
+                I64Add3WideU => visit_i64_add3_wide_u (arity 3 -> 2)
             }
         }
     };

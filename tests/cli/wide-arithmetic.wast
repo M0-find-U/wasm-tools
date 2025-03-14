@@ -21,6 +21,24 @@
     local.get 0
     local.get 1
     i64.mul_wide_u)
+  (func (param i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    i64.add_wide_s)
+  (func (param i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    i64.add_wide_u)
+  (func (param i64 i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    local.get 2
+    i64.add3_wide_s)
+  (func (param i64 i64 i64) (result i64 i64)
+    local.get 0
+    local.get 1
+    local.get 2
+    i64.add3_wide_u)
 )
 
 (assert_invalid
